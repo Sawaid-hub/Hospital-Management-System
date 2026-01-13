@@ -8,9 +8,8 @@
  Team Members
 | Name | Student ID | Role |
 |------|------------|------|
-| [Student Name 1] | [ID 1] | Lead Developer / Refactoring |
-| [Student Name 2] | [ID 2] | Database Architect / QA |
-| [Student Name 3] | [ID 3] | Documentation / UI Design |
+| [M Sawaid Shah] | [ID 37559] | Lead Developer / Refactoring |
+| [Okamis Shah] | [ID 37844] | Database Architect / QA |
 
  Project Overview
 The goal of this project is to take an existing **Legacy Hospital Management System**, analyze its architectural flaws, and re-engineer it into a modular, maintainable, and testable application.
