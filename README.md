@@ -6,8 +6,8 @@
 **Technology Stack:** Java (Swing), MySQL, JDBC  
 
  Team Members
-| Name | Student ID | Role |
-|------|------------|------|
+| Name | Student ID |
+|------|------------|
 | [M Sawaid Shah] | [ID 37559] |
 | [Okamis Shah] | [ID 37844] |
 
