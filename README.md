@@ -6,10 +6,10 @@
 **Technology Stack:** Java (Swing), MySQL, JDBC  
 
  Team Members
-| Name | Student ID | Role |
-|------|------------|------|
-| [M Sawaid Shah] | [ID 37559] | Lead Developer / Refactoring |
-| [Okamis Shah] | [ID 37844] | Database Architect / QA |
+| Name | Student ID |
+|------|------------|
+| [M Sawaid Shah] | [ID 37559] |
+| [Okamis Shah] | [ID 37844] |
 
  Project Overview
 The goal of this project is to take an existing **Legacy Hospital Management System**, analyze its architectural flaws, and re-engineer it into a modular, maintainable, and testable application.
