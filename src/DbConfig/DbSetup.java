@@ -1,18 +1,19 @@
 package DbConfig;
 
-import config.GlobalConstants;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.util.Properties;
+import java.io.IOException;
 
 public class DbSetup {
 
-    // Static block to load the JDBC driver
+    private static Properties properties = new Properties();
+
+    // Static block to load the JDBC driver and properties
     static {
         try {
+            properties.load(DbSetup.class.getClassLoader().getResourceAsStream("db.properties"));
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("MySQL Driver not found", e);
+        } catch (Exception e) {
+            throw new RuntimeException("Error initializing database configuration", e);
         }
     }
 
@@ -20,7 +21,11 @@ public class DbSetup {
     public static Connection getConnection() throws SQLException {
         Connection con = null;
         try {
-            con = DriverManager.getConnection(GlobalConstants.DB_URL, GlobalConstants.DB_USER, GlobalConstants.DB_PASSWORD);
+            con = DriverManager.getConnection(
+                properties.getProperty("db.url"),
+                properties.getProperty("db.user"),
+                properties.getProperty("db.password")
+            );
         } catch (SQLException e) {
             throw new SQLException("Error connecting to the database", e);
         }

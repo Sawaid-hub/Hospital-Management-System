@@ -20,13 +20,10 @@ public class Table extends JPanel {
 
     commonMethods cm = new commonMethods();
 
-    public Table(String[] columns, String entity, Object[][] formStructure) {
+    public Table(String[] columns, String entity, Object[][] formStructure, Object[][] dataRows) {
         this.entity = entity;
         this.formStructure = formStructure;
         initComponents();
-
-        String query = "SELECT * FROM " + entity;
-        Object[][] dataRows = CrudManager.read(query);
 
         setupTable(dataRows, columns);
     }
